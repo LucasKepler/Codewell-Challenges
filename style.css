@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Sarala&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: rgb(250, 250, 237);
+    padding: 30px;
+}
+
+h2 {
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    color: gray;
+}
+
+/* NAVBAR */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.nav-container {
+    display: none;
+    gap: 1.5rem;
+}
+
+.nav li a, 
+.menu-sigin a {
+    text-decoration: none;
+    list-style: none;
+}
+
+#nav-menu {
+    display: block;
+    cursor: pointer;
+}
+
+.menu-sigin {
+    display: none;
+}
+
+#nav-container-mobile {
+    transition: all .3s ease;
+    position: fixed;
+    place-items: center;
+    background: white;
+    color: gray;
+    width: 95%;
+    border-radius: 10px;
+    padding: 40px 30px;
+    left: 100%;
+    top: 3%;
+}
+
+#top-nav-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#top-nav-mobile p {
+    text-transform: uppercase;
+}
+
+#close {
+    width: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.p-drop {
+    width: 85%;
+}
+
+
+.menu-text {
+    text-decoration: none;
+    color: gray;
+}
+
+.span-drop {
+    color: black;
+}
+
+#nav-container-mobile.active {
+    left: 5%;
+}
+
+/* MAIN */
+#main {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content1 {
+    margin-top: 35px;
+}
+
+.main-content1 h1 {
+    font-size: 35px;
+    padding-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.main-content1 span {
+    color: rgb(255, 187, 0);
+}
+
+button {
+    background-color: rgb(1, 59, 1);
+    color: white;
+    width: 135px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: rgb(1, 59, 1, 0.85);
+}
+
+.main-content1-container {
+    display: flex;
+    align-items:self-start;
+}
+
+.main-content1-container-logos {
+    display: flex;
+    gap: 18px;
+    margin-left: 20px;
+}
+
+.main-content2 {
+    display: none;
+}
+
+/* FOOTER */
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.footer-logo-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+#footer img {
+    width: 100%;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        padding: 20px 120px;
+    }
+
+    h2, li, a {
+        font-size: 20px;
+        color: gray;
+    }
+
+    /* NAVBAR */
+    .logo {
+        width: 150px;
+    }
+
+    .nav-container {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .nav-items {
+        display: flex;
+        list-style: none;
+        cursor: pointer;
+        margin-top: 15px;
+        gap: 30px;
+    }
+
+    .menu-sigin {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .menu-sigin button {
+        margin-top: 30px;
+    }
+
+    #nav-menu {
+        display: none;
+    }
+
+    .dropdown-menu {
+        width: 450px;
+        height: 380px;
+        border: none;
+        padding: 20px;
+    }
+
+    .dropdown-item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown-item-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .p-drop {
+        position: relative;
+        left: 45px;
+        margin: -15px;
+        padding-bottom: 20px;
+        color: gray;
+    }
+
+    .scan-drop {
+        position: relative;
+        top: 5px;
+        left: 5px;
+    }
+
+    #nav-container-mobile {
+        position: fixed;
+        left: 100%;
+    }
+
+    /* MAIN */
+    #main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+        margin-top: 80px;
+    }
+
+    .main-content1 h1 {
+        font-size: 60px;
+    }
+
+    .main-content2 {
+        display: flex;
+    }
+
+    .main-content2 img {
+        width: 330px;
+    }
+
+    /* FOOTER */
+    .footer-logo-container {
+        display: flex;
+        gap: 50px;
+    }
+}
